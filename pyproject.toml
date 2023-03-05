@@ -7,6 +7,7 @@ authors = ["Jakob Klotz <88966745+kometenmelodie@users.noreply.github.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 pandas = "^1.5.3"
+rdkit = "^2022.9.5"
 
 [tool.poetry.group.dev]
 optional = true
@@ -15,6 +16,15 @@ optional = true
 pre-commit = "^3.1.1"
 
 [tool.ruff]
+select = [
+    # Pyflakes
+    "F",
+    # Pycodestyle
+    "E",
+    "W",
+    # isort
+    "I001"
+]
 line-length = 79
 target-version = "py310"
 

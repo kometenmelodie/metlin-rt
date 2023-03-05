@@ -1,3 +1,5 @@
 .idea
 
 poetry.lock
+data/data.csv
+data/morgan_fp.csv
