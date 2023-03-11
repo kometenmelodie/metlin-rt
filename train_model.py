@@ -1,5 +1,6 @@
 import pandas as pd
-import tensorflow as tf
+from keras.layers import Dense
+from keras.models import Sequential
 from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
 
@@ -16,12 +17,12 @@ x_train, x_test, y_train, y_test = train_test_split(
 )
 
 # reconstruction of the METLIN model
-model = tf.keras.models.Sequential()
-model.add(tf.keras.layers.Dense(units=1000, activation="relu"))
-model.add(tf.keras.layers.Dense(units=500, activation="relu"))
-model.add(tf.keras.layers.Dense(units=200, activation="relu"))
-model.add(tf.keras.layers.Dense(units=100, activation="relu"))
-model.add(tf.keras.layers.Dense(units=1))
+model = Sequential()
+model.add(Dense(units=1000, activation="relu"))
+model.add(Dense(units=500, activation="relu"))
+model.add(Dense(units=200, activation="relu"))
+model.add(Dense(units=100, activation="relu"))
+model.add(Dense(units=1))
 
 model.compile(optimizer="adam", loss="mean_squared_error")
 
