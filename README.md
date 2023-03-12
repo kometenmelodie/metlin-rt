@@ -27,3 +27,10 @@ Subsequently, run `calc_fp.py` to calculate the
 Morgan fingerprints (the predictors).
 Lastly, `train_model.py` trains and saves the neural net.
 
+## References
+
+```
+Domingo-Almenara, X., et al. (2019).
+The METLIN small molecule dataset for machine learning-based
+retention time prediction. Nature Communications, 10(1), 5811.
+```
